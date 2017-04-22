@@ -40,6 +40,11 @@
 			-moz-text-shadow:    2px 2px 2px #000;
 			text-shadow:         2px 2px 2px #000;
 		}
+
+		.types img {
+			max-width:33%;
+			float: right;
+		}
 		</style>
 
 		<!--[if lt IE 9]>
@@ -53,72 +58,12 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h2>I've got some data.</h2>
-					<h2> Now what?</h2>
-					<p>
-						<small>Slides at <a href="http://chagan.github.io/data-talk/#/">chagan.github.io/data-talk</a></small>
-					</p>
-				</section>
-				<section class="imagebg" data-background="http://media.giphy.com/media/A06UFEx8jxEwU/giphy.gif">
-					<p>You may think your data look like this</p>
-					
-				</section>
-
-				<section class="imagebg" data-background="http://www.smh.com.au/ffximage/2008/01/16/nicolabeynon_wideweb__470x335,0.jpg">
-					<p>But really, it's this</p>
-					
-				</section>
-				<section data-markdown>
-				## What does that mean
-				* Come with questions
-				* Know their bias
-					* Who collected this? For what?
-					* How sure are they?
-				* Can't rely only on the data
-				</section>
-
-				<section class="imagebg" data-background="http://i.giphy.com/5mP2feeTw3yF2.gif">
-					<p>More likely, your data are this</p>
-				</section>
-
-				<section data-markdown>
-				## Quick bath
-				* Take a min, max, sum and average
-				* Sort and scan
-				* Missing values
-				* Change things around
-					* Text to columns
-					* Convert to numbers, dates, text as needed
-					* Pivot tables
-				</section>
-
-				<section data-markdown>
-				## Data smells
-				* Talk to the people who collect the data
-					* Get the documents behind the data
-				* Check previous years
-				* Row numbers
-					* Excel row limits
-					* Round numbers
-				* Sample size
-				* Null Island
-				</section>
-
-				<section >
-					<img src="img/beylobster.jpg">
-				</section>
-
-				<section data-markdown>
-				## Make your life easier
-				* Create a data dictionary
-				* Make a copy of the original
-				* Don't make changes in a cell, create a new column
-				* Track your changes
-				</section>
 
 				<section class="imagebg" data-background="img/wsm.jpg">
-					<h2>Visualization</h2>
+					<h2>Data Visualization</h2>
+					<h3>
+						<small>Slides at <a href="http://chagan.github.io/data-talk/#/">chagan.github.io/chc-data-talk</a></small>
+					</h3>
 				</section>
 
 				<section data-markdown>
@@ -129,22 +74,56 @@
 				* Make a sketch (or many)
 				</section>
 
-				<section data-markdown>
-				## Types of charts
-				* Why is this not a bar chart?
-				* Comparisons
-					* Bar charts, line graphs, slope graphs
-				* General trends
-					* Area (bubbles, pies), shades
+				<section>
+					<section data-markdown>
+					## What are we good at understanding?
+					</section>
+					<section>
+						<img src="img/charts.png" style="max-width:50%">
+						<br><small><em><a href="http://paldhous.github.io/ucb/2016/dataviz/week2.html">Peter Aldous</a></em></small>
+					</section>
+				</section>
+
+				<section class="types">
+					<section data-markdown>
+						## What's most important?
+						* Comparison
+						* Change over time
+						* Part-to-whole
+						* Relationship
+						* Distribution
+					</section>
+					<section data-markdown>
+						## Comparison
+						* Bar/column charts ![](img/bar.png)
+					</section>
+					<section data-markdown>
+						## Change over time
+						* Line charts 
+						* Slope graphs 
+						![](img/line.png) ![](img/slope.png)
+					</section>
+					<section data-markdown>
+						## Part-to-whole
+						* Pie charts 
+						* Stacked bar charts 
+						![](img/pie.png)![](img/stacked.png)
+					</section>
+					<section data-markdown>
+						## Relationship
+						* Scatter plot ![](img/scatter.png)
+					</section>
 				</section>
 
 				<section data-markdown>
 				## Design
 				* Clarify, not simplify
 				* Limit colors, fonts
+					* [Color Brewer](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 				* Interactivity
 					* Overview first, zoom and filter, then details-on-demand
 					* What is the purpose (what will your users to get out of it?)
+					* [In Defense of Interactive Graphics](https://www.vis4.net/blog/posts/in-defense-of-interactive-graphics/)
 				</section>
 
 				<section data-markdown>
@@ -153,6 +132,8 @@
 				* [Tableau](http://www.tableau.com/products/public)
 				* [High Charts](http://www.highcharts.com/)
 				* [Google Charts](https://developers.google.com/chart/)
+				* [Infogram](https://infogr.am/)
+				* [Atlas](https://www.theatlas.com/)
 				</section>
 
 				<section >
@@ -172,9 +153,27 @@
 					* Geography [doesn't distort the data](https://medium.com/@joshuatauberer/how-that-map-you-saw-on-538-under-represents-minorities-by-half-and-other-reasons-to-consider-a-4a98f89cbbb1#.7wjk8uvoz)
 				</section>
 
+				<section>
+					<section data-markdown>
+						## Types of maps
+					</section>
+					<section data-markdown>
+						### Choropleth
+						![](img/choropleth.png)
+					</section>
+					<section data-markdown>
+						### Dot
+						![](img/dot.jpg)
+					</section>
+					<section data-markdown>
+						### Cartogram
+						![](img/cartogram.jpg)
+					</section>
+				</section>
+
 				<section data-markdown>
 				## Tools
-				* [CartoDB](https://cartodb.com/)
+				* [Carto (maybe ...)](https://cartodb.com/)
 				* [Google Fusion Tables](https://support.google.com/fusiontables/answer/2527132?hl=en&topic=2573107&ctx=topic)
 				* [ESRI Story Maps](http://storymaps.arcgis.com/en/)
 				* [Leaflet (Maptime Tutorial)](http://maptime.io/chicago/learn-leaflet/#0)
@@ -183,23 +182,14 @@
 
 				<section data-markdown>
 				## Resources
+				* [Visual Vocabulary](http://ft-interactive.github.io/visual-vocabulary/)
+				* [The Functional Art](http://www.thefunctionalart.com/)
+				* [When to use maps in data visualisation: a great big guide](http://onlinejournalismblog.com/2015/08/24/when-to-use-maps-in-data-visualisation-a-great-big-guide/)
 				* [How to 'interview' a big pile of data](http://training.npr.org/visual/what-to-do-with-a-big-pile-of-data/)
 				* [The Quartz Guide to Bad Data](https://github.com/Quartz/bad-data-guide)
-				* [When to use maps in data visualisation: a great big guide](http://onlinejournalismblog.com/2015/08/24/when-to-use-maps-in-data-visualisation-a-great-big-guide/)
-				* [The Functional Art](http://www.thefunctionalart.com/)
 				* [ProPublica Guide to bulletproofing your data](https://github.com/propublica/guides/blob/master/data-bulletproofing.md)
 				* [Poynter's Excel for journalists](http://www.poynter.org/news/media-innovation/154584/how-journalists-can-use-excel-to-organize-data-for-stories/)
 				* [IRE and NICAR-L](www.ire.org)
-				</section>
-
-				<section data-markdown>
-				## Lab
-				* [Download Chicago City salaries dataset as csv (Comma Separated Values)](https://data.cityofchicago.org/)
-				* Load the file into Google Sheets
-				* Who's the highest/lowest paid employee? Anything intersting about that?
-				* Use a pivot table to find the department spending the most on salaries. Chart the top 10 in your tool of choice.
-				* Find one other interesting thing that might be a story. Post that and your chart to this week's slack.
-				* Stuck? Refer back to "How to 'interview' a big pile of data" on the prevous slide.
 				</section>
 
 			</div>
