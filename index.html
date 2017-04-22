@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Using data to tell stories</title>
+
+		<meta name="description" content="Using data to tell stories - Presentation by Chris Hagan">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<style type="text/css">
+
+		.imagebg {
+			color:#FFF;
+			-webkit-text-shadow: 2px 2px 2px #000;
+			-moz-text-shadow:    2px 2px 2px #000;
+			text-shadow:         2px 2px 2px #000;
+		}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>I've got some data.</h2>
+					<h2> Now what?</h2>
+					<p>
+						<small>Slides at <a href="http://chagan.github.io/data-talk/#/">chagan.github.io/data-talk</a></small>
+					</p>
+				</section>
+				<section class="imagebg" data-background="http://media.giphy.com/media/A06UFEx8jxEwU/giphy.gif">
+					<p>You may think your data look like this</p>
+					
+				</section>
+
+				<section class="imagebg" data-background="http://www.smh.com.au/ffximage/2008/01/16/nicolabeynon_wideweb__470x335,0.jpg">
+					<p>But really, it's this</p>
+					
+				</section>
+				<section data-markdown>
+				## What does that mean
+				* Come with questions
+				* Know their bias
+					* Who collected this? For what?
+					* How sure are they?
+				* Can't rely only on the data
+				</section>
+
+				<section class="imagebg" data-background="http://i.giphy.com/5mP2feeTw3yF2.gif">
+					<p>More likely, your data are this</p>
+				</section>
+
+				<section data-markdown>
+				## Quick bath
+				* Take a min, max, sum and average
+				* Sort and scan
+				* Missing values
+				* Change things around
+					* Text to columns
+					* Convert to numbers, dates, text as needed
+					* Pivot tables
+				</section>
+
+				<section data-markdown>
+				## Data smells
+				* Talk to the people who collect the data
+					* Get the documents behind the data
+				* Check previous years
+				* Row numbers
+					* Excel row limits
+					* Round numbers
+				* Sample size
+				* Null Island
+				</section>
+
+				<section >
+					<img src="img/beylobster.jpg">
+				</section>
+
+				<section data-markdown>
+				## Make your life easier
+				* Create a data dictionary
+				* Make a copy of the original
+				* Don't make changes in a cell, create a new column
+				* Track your changes
+				</section>
+
+				<section class="imagebg" data-background="img/wsm.jpg">
+					<h2>Visualization</h2>
+				</section>
+
+				<section data-markdown>
+				## Before you start
+				* Know your data
+				* What is the [purpose of your visualization](http://junkcharts.typepad.com/junk_charts/junk-charts-trifecta-checkup-the-definitive-guide.html)?
+				* What are your users likely to take away?
+				* Make a sketch (or many)
+				</section>
+
+				<section data-markdown>
+				## Types of charts
+				* Why is this not a bar chart?
+				* Comparisons
+					* Bar charts, line graphs, slope graphs
+				* General trends
+					* Area (bubbles, pies), shades
+				</section>
+
+				<section data-markdown>
+				## Design
+				* Clarify, not simplify
+				* Limit colors, fonts
+				* Interactivity
+					* Overview first, zoom and filter, then details-on-demand
+					* What is the purpose (what will your users to get out of it?)
+				</section>
+
+				<section data-markdown>
+				## Tools
+				* [Chartbuilder](https://quartz.github.io/Chartbuilder/)
+				* [Tableau](http://www.tableau.com/products/public)
+				* [High Charts](http://www.highcharts.com/)
+				* [Google Charts](https://developers.google.com/chart/)
+				</section>
+
+				<section >
+					<img src="img/700reddots.jpg">
+				</section>
+
+				<section>
+					<img src="https://imgs.xkcd.com/comics/heatmap.png">
+				</section>
+
+				<section data-markdown>
+				## When is [a map a map](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/)
+				* The geography is key to the story
+					* The interesting trends are tied to the geography
+				* That story is clear in the presentation
+					* Showing those trends on a map is the clearest way to present them
+					* Geography [doesn't distort the data](https://medium.com/@joshuatauberer/how-that-map-you-saw-on-538-under-represents-minorities-by-half-and-other-reasons-to-consider-a-4a98f89cbbb1#.7wjk8uvoz)
+				</section>
+
+				<section data-markdown>
+				## Tools
+				* [CartoDB](https://cartodb.com/)
+				* [Google Fusion Tables](https://support.google.com/fusiontables/answer/2527132?hl=en&topic=2573107&ctx=topic)
+				* [ESRI Story Maps](http://storymaps.arcgis.com/en/)
+				* [Leaflet (Maptime Tutorial)](http://maptime.io/chicago/learn-leaflet/#0)
+				* [MapBox](https://www.mapbox.com/)
+				</section>
+
+				<section data-markdown>
+				## Resources
+				* [How to 'interview' a big pile of data](http://training.npr.org/visual/what-to-do-with-a-big-pile-of-data/)
+				* [The Quartz Guide to Bad Data](https://github.com/Quartz/bad-data-guide)
+				* [When to use maps in data visualisation: a great big guide](http://onlinejournalismblog.com/2015/08/24/when-to-use-maps-in-data-visualisation-a-great-big-guide/)
+				* [The Functional Art](http://www.thefunctionalart.com/)
+				* [ProPublica Guide to bulletproofing your data](https://github.com/propublica/guides/blob/master/data-bulletproofing.md)
+				* [Poynter's Excel for journalists](http://www.poynter.org/news/media-innovation/154584/how-journalists-can-use-excel-to-organize-data-for-stories/)
+				* [IRE and NICAR-L](www.ire.org)
+				</section>
+
+				<section data-markdown>
+				## Lab
+				* [Download Chicago City salaries dataset as csv (Comma Separated Values)](https://data.cityofchicago.org/)
+				* Load the file into Google Sheets
+				* Who's the highest/lowest paid employee? Anything intersting about that?
+				* Use a pivot table to find the department spending the most on salaries. Chart the top 10 in your tool of choice.
+				* Find one other interesting thing that might be a story. Post that and your chart to this week's slack.
+				* Stuck? Refer back to "How to 'interview' a big pile of data" on the prevous slide.
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
